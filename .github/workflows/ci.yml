@@ -1,0 +1,25 @@
+name: Continuous Integration
+#  on merupakan event yang dapat men-trigger actions harus berjalan. Kami beri nilai properti ini dengan 
+#  pull_request dan branch master karena kami ingin action dijalankan ketika ada pull request ke branch master.
+on:
+  pull_request:
+    branches:
+      - master
+ 
+# jobs merupakan properti yang mendefinisikan langkah-langkah action. Satu GitHub action dapat terdiri dari berbagai action. 
+# Pada kasus kali ini, kami hanya mendefinisikan satu jobs yaitu automation-test-job. Dalam job, kita definisikan alur kerjanya,
+#  seperti mendefinisikan plugin yang digunakan dan menetapkan scripts yang dijalankan.
+jobs:
+  automation-test-job:
+    runs-on: ubuntu-latest
+ 
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: npm install and test
+        run: |
+          npm install
+          npm run ci:test
