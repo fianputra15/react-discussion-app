@@ -44,7 +44,7 @@ export default function LoginForm(props) {
             required
             onChange={handleChangePassword}
             type="password"
-            data-testid="passwords"
+            data-testid="password"
             id="password"
             className="p-4 bg-white dark:bg-[#323232] w-full border-b-[1px] border-gray-300 rounded  dark:border-[1px]"
           />
