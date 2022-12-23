@@ -41,7 +41,7 @@ export default function Navbar() {
               </Link>
               <Link className="flex items-center gap-3 p-2 sm:flex md:flex lg:hidden" to={HOME_PAGE}>
                 <MdOutlineHome color="#e64e41" width={16} />
-                <span className="text-gray-400 text-sm font-medium">Homes</span>
+                <span className="text-gray-400 text-sm font-medium">Home</span>
               </Link>
             </>
           )}
