@@ -30,7 +30,7 @@ export default function LoginForm(props) {
             onChange={handleChangeEmail}
             type="text"
             id="username"
-            data-testid="email"
+            data-testid="username"
             className="p-4 bg-white dark:bg-[#323232] w-full border-b-[1px] border-gray-300  rounded  dark:border-[1px]"
           />
 
