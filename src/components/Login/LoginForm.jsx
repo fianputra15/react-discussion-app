@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import useInput from '../../hooks/useInput';
-import { REGISTER_PAGE } from '../../constants/path';
 import Button from '../common/Button';
 
 export default function LoginForm(props) {
@@ -18,7 +16,6 @@ export default function LoginForm(props) {
       email,
       password,
     });
-
     setIsLoading(false);
   };
 
@@ -33,6 +30,7 @@ export default function LoginForm(props) {
             onChange={handleChangeEmail}
             type="text"
             id="username"
+            data-testid="username"
             className="p-4 bg-white dark:bg-[#323232] w-full border-b-[1px] border-gray-300  rounded  dark:border-[1px]"
           />
 
@@ -46,6 +44,7 @@ export default function LoginForm(props) {
             required
             onChange={handleChangePassword}
             type="password"
+            data-testid="password"
             id="password"
             className="p-4 bg-white dark:bg-[#323232] w-full border-b-[1px] border-gray-300 rounded  dark:border-[1px]"
           />
@@ -63,12 +62,7 @@ export default function LoginForm(props) {
           >
             Submit
           </Button>
-          <Link
-            to={REGISTER_PAGE}
-            className="block text-center px-4 py-2 underline text-gray-500 text-sm dark:text-white"
-          >
-            Create Your Account
-          </Link>
+
         </div>
       </div>
     </form>

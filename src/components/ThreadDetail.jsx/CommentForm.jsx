@@ -24,6 +24,7 @@ export default function CommentForm(props) {
         <textarea
           onChange={handleChangeThreadComment}
           value={!threadComment ? '' : threadComment}
+          data-testid="thread-comment"
           className="border-primary border-[1px] h-[100px] w-full rounded-md p-4 mb-2"
           placeholder="Write your comments here..."
         />
