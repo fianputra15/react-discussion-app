@@ -1,4 +1,3 @@
-/* eslint-disable no-undef */
 import leaderboardReducer from './reducer';
 /**
  * test screnario for leaderboard reducer

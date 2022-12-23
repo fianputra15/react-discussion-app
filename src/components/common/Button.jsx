@@ -28,7 +28,7 @@ Button.propTypes = {
   type: PropTypes.string.isRequired,
   bgColor: PropTypes.string,
   loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.element), PropTypes.string]),
+  children: PropTypes.oneOfType([PropTypes.string]),
   className: PropTypes.string,
 };
 

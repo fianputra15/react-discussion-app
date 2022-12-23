@@ -1,8 +1,10 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
 import LoginForm from '../components/Login/LoginForm';
 import { asyncSetAuthUser } from '../states/auth/action';
 import Wrapper from '../components/common/Wrapper';
+import { REGISTER_PAGE } from '../constants/path';
 
 export default function LoginPage() {
   const dispatch = useDispatch();
@@ -19,6 +21,14 @@ export default function LoginPage() {
               Login
             </h2>
             <LoginForm handleSubmitForm={handleSubmitForm} />
+            <div>
+              <Link
+                to={REGISTER_PAGE}
+                className="block text-center px-4 py-2 underline text-gray-500 text-sm dark:text-white"
+              >
+                Create Your Account
+              </Link>
+            </div>
           </div>
         </div>
       </div>
