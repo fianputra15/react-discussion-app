@@ -24,7 +24,7 @@ export default function Navbar() {
       </Link>
       <div className="flex gap-10 items-center">
         <div className="flex text-primary gap-5 font-bold items-center">
-          {!authUser && (
+          {!authUser ? (
             <div className="flex text-primary gap-5 items-center font-bold">
               <Link className="hover:underline" to={HOME_PAGE}>
                 Login
@@ -33,15 +33,19 @@ export default function Navbar() {
                 Register
               </Link>
             </div>
+          ) : (
+            <>
+              <Link className=" items-center gap-3 p-2 sm:flex md:flex lg:hidden" to={LEADERBOARDS_PAGE}>
+                <MdLeaderboard color="#e64e41" width={16} />
+                <span className="text-gray-400 text-sm font-medium">Leaderboards</span>
+              </Link>
+              <Link className="flex items-center gap-3 p-2 sm:flex md:flex lg:hidden" to={HOME_PAGE}>
+                <MdOutlineHome color="#e64e41" width={16} />
+                <span className="text-gray-400 text-sm font-medium">Home</span>
+              </Link>
+            </>
           )}
-          <Link className=" items-center gap-3 p-2 sm:flex md:hidden lg:hidden" to={LEADERBOARDS_PAGE}>
-            <MdLeaderboard color="#e64e41" width={16} />
-            <span className="text-gray-400 text-sm font-medium">Leaderboards</span>
-          </Link>
-          <Link className="flex items-center gap-3 p-2 sm:flex md:hidden lg:hidden" to={HOME_PAGE}>
-            <MdOutlineHome color="#e64e41" width={16} />
-            <span className="text-gray-400 text-sm font-medium">Home</span>
-          </Link>
+
           {authUser && (
             <button
               onClick={() => handleLogout()}
