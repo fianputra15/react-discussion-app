@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { AnimatePresence } from 'framer-motion';
 import ThreadPage from './pages/ThreadPage';
 import Navbar from './components/common/Navbar';
 import LoginPage from './pages/LoginPage';
@@ -67,13 +68,15 @@ function App() {
       <main className="flex">
         <div className="flex lg:w-[1000px] md:w-[800px] sm:w-full mx-auto">
           <Sidebar />
-          <Routes>
-            <Route path={HOME_PAGE} element={<HomePage />} />
-            <Route path={DETAIL_PAGE} element={<ThreadPage />} />
-            <Route path={ADD_PAGE} element={<AddThreadPage />} />
-            <Route path={LEADERBOARDS_PAGE} element={<LeaderboardsPage />} />
+          <AnimatePresence mode="wait">
+            <Routes>
+              <Route path={HOME_PAGE} element={<HomePage />} />
+              <Route path={DETAIL_PAGE} element={<ThreadPage />} />
+              <Route path={ADD_PAGE} element={<AddThreadPage />} />
+              <Route path={LEADERBOARDS_PAGE} element={<LeaderboardsPage />} />
 
-          </Routes>
+            </Routes>
+          </AnimatePresence>
 
         </div>
       </main>
