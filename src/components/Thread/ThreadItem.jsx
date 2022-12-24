@@ -42,7 +42,9 @@ export default function ThreadItem(props) {
     dispatch(asyncToogleNeutralizeVoteThread(id));
   };
   return (
-    <div className="bg-white p-4 w-full h-auto shadow-md rounded">
+    <div
+      className="bg-white p-4 w-full h-auto shadow-md rounded"
+    >
       {
         isDetail ? (
           <ThreadHead
