@@ -49,7 +49,6 @@ export default function ThreadPage() {
         <ul className="space-y-2 ">
           {
             threadComments?.map((comment) => (
-
               <CommentList key={comment?.id} comment={comment} />
             ))
           }

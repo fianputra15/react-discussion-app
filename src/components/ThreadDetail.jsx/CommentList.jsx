@@ -128,7 +128,11 @@ CommentList.defaultProps = {
   comment: {
     content: '',
     body: '',
-    owner: '',
+    owner: {
+      id: '',
+      name: '',
+      avatar: '',
+    },
     upVotesBy: '',
     downVotesBy: '',
     totalComments: '',
