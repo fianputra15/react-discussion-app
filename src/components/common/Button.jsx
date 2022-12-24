@@ -17,7 +17,7 @@ export default function Button(props) {
       disabled={loading}
       className={`${
         loading && 'opacity-70'
-      } px-4 py-2 ${variant[bgColor]} w-full block text-white drop-shadow ml-auto rounded-full hover:opacity-70 ${className}`}
+      } px-4 py-2 ${variant[bgColor]} w-full block  drop-shadow ml-auto rounded-full hover:opacity-70 ${className}`}
     >
       {loading ? '...' : children}
     </button>
@@ -27,7 +27,7 @@ export default function Button(props) {
 Button.propTypes = {
   type: PropTypes.string.isRequired,
   bgColor: PropTypes.string,
-  loading: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  loading: PropTypes.bool,
   children: PropTypes.oneOfType([PropTypes.string]),
   className: PropTypes.string,
 };

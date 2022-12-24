@@ -5,22 +5,16 @@ module.exports = {
     jest: true,
     'cypress/globals': 'true',
   },
-  extends: [
-    'plugin:react/recommended',
-    'airbnb',
-  ],
-  overrides: [
-  ],
+  extends: ['plugin:react/recommended', 'airbnb', 'plugin:storybook/recommended'],
+  overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    'cypress'
-  ],
+  plugins: ['react', 'cypress'],
   rules: {
     'no-underscore-dangle': 'off',
     'react/jsx-filename-extension': 'off',
+    'react/jsx-props-no-spreading': 'off',
   },
 };
