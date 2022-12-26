@@ -1,8 +1,12 @@
 import { showLoading, hideLoading } from 'react-redux-loading-bar';
 import api from '../../utils/api';
 import { asyncReceiveThreadDetail, receiveThreadDetailActionCreator } from './action';
-// Testing for thunk functionality
-
+/**
+ * test screnario for thread detail thunk functionality
+ * - threadDetail Thunk
+ * - should dispatch action correctly when data fetching is success on thread detail
+ *
+ */
 const fakeThreadDetailResponse = {
   id: 'thread-GIUYgCkSwkjMYyaJ',
   title: 'Fusce at neque sem. Vestibulum vestibulum justo a mollis mattis. ',

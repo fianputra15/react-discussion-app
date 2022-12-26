@@ -1,12 +1,11 @@
-/* eslint-disable no-undef */
+
 import threadReducer from './reducer';
 
 /**
- * test screnario for leaderboard reducer
- * - leaderboardReducer function
- * - show return the initial state when given by unknown action
- * - should return leaderboard list when give by SET_LEADERBOARDS_LIST
- *
+ * test screnario for thread reducer
+ * - should return the initial state when given by unknown action
+ * - should return the threads when given by RECEIVE_THREAD action
+ * - should remove user from downVoteBy after up-vote the thread then should remove user from upVoteBy after down-vote the thread
  */
 
 describe('threadReducer function', () => {

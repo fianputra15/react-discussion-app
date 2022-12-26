@@ -1,7 +1,13 @@
 import { showLoading, hideLoading } from 'react-redux-loading-bar';
 import api from '../../utils/api';
 import { asyncToogleUpVoteThread, toggleUpvoteThreadActionCreator } from './action';
-// Testing for thunk functionality
+
+/**
+ * skenario testing for threads thunk functionality
+ *
+ * - thread thunk function
+ * - should dispatch action correctly when clicking toggle up vote
+ */
 
 const fakeThreadResponse = [
   {

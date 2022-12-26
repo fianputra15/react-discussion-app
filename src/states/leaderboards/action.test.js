@@ -1,7 +1,14 @@
 import { showLoading, hideLoading } from 'react-redux-loading-bar';
 import api from '../../utils/api';
 import { asyncReceiveLeaderboardsList, setLeaderboardsList } from './action';
-// Testing for thunk functionality
+
+
+/**
+ * skenario testing for leaderboard thunk functionality
+ *
+ * - LoginForm component
+ * - should dispatch action correctly when data fetching is success on leaderboard
+ */
 
 const fakeLeaderboardResponse = [
   [
