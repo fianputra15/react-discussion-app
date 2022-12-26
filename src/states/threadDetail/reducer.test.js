@@ -1,11 +1,10 @@
 // /* eslint-disable no-undef */
 import threadDetailReducer from './reducer';
 /**
- * test screnario for leaderboard reducer
- * - leaderboardReducer function
+ * test screnario for thread detail reducer
+ * - threadDetailReducer function
  * - show return the initial state when given by unknown action
- * - should return leaderboard list when give by SET_LEADERBOARDS_LIST
- *
+ * - should return the thread detail when given by RECEIVE_THREAD_DETAIL action
  */
 
 describe('threadDetailReducer function', () => {
